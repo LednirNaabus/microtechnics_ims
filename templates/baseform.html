@@ -2,20 +2,23 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
         <title> {% block title %}
               
         {% endblock title %}</title>
+        {% load static %}
         <link rel="icon"  href="/static/images/MSClogo.png"/>
         <!-- adminlte template -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/css/adminlte.min.css">
+        <!-- login-form css -->
+        <link rel="stylesheet" href="{% static 'css/baseform-style.css' %}">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
       </head>
       <body>
           <div class="login-page">
               <div class="login-box">
                   <div class="login-logo">
-                      <p style="color: #495057"><b>Microtechnic</b> System Co.</p>
+                      <p style="color: #495057;"><b>Microtechnic</b> System Co.</p>
                   </div>
                   <!-- /.login-logo -->
                   {% block content %}
@@ -23,6 +26,78 @@
                   {% endblock content %}
               </div>
           </div>
+          <!-- Wave SVG Animation -->
+          <div class="waves">
+            <svg width="100%" height="200px" fill="none" version="1.1"
+            xmlns="http://www.w3.org/2000/svg">
+            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#00334e" />
+                <stop offset="50%" stop-color="#cfeb9f" />
+                <stop offset="100%" stop-color="#006837" />
+            </linearGradient>
+            <path 
+                fill="url(#grad1)" 
+                d="
+                M0 67
+                C 273,183
+                    822,-40
+                    1920.00,106 
+                
+                V 359 
+                H 0 
+                V 67
+                Z">
+                <animate 
+                repeatCount="indefinite" 
+                fill="url(#grad1)" 
+                attributeName="d" 
+                dur="15s"
+                attributeType="XML"
+                values="
+                    M0 77 
+                    C 473,283
+                    822,-40
+                    1920,116 
+                    
+                    V 359 
+                    H 0 
+                    V 67 
+                    Z; 
+
+                    M0 77 
+                    C 473,-40
+                    1222,283
+                    1920,136 
+                    
+                    V 359 
+                    H 0 
+                    V 67 
+                    Z; 
+
+                    M0 77 
+                    C 973,260
+                    1722,-53
+                    1920,120 
+                    
+                    V 359 
+                    H 0 
+                    V 67 
+                    Z; 
+
+                    M0 77 
+                    C 473,283
+                    822,-40
+                    1920,116 
+                    
+                    V 359 
+                    H 0 
+                    V 67 
+                    Z
+                    ">
+                </animate>
+            </path>
+            </svg>
+        </div>
       </body>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/js/adminlte.min.js"></script>
